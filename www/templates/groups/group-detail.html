@@ -1,0 +1,13 @@
+<ion-view view-title="{{group.name}}">
+  <ion-content>
+  	<ion-list>
+    <ion-item class="item-avatar" ng-repeat="user in userInGroup" type="item-text-wrap" href="#/tab/friend/{{user.id}}">
+        <img ng-src="{{user.face}}">
+        <!--<p>{{user.id}}</p>-->
+        <h2>{{user.name}}</h2>
+    </ion-item>
+
+	</ion-list>
+
+  </ion-content>
+</ion-view>

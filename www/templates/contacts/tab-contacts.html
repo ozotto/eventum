@@ -1,0 +1,31 @@
+<ion-view view-title="myEvents">
+  <!-- <ion-header-bar class="bar-stable"> -->
+            
+            
+  <!-- </ion-header-bar> -->
+  <ion-content>
+  
+  <h1 class="title">Ionic Blank Starter {{test}}</h1>
+            <button class="button" ng-click="getContactList()">Loadaa</button>
+    <ion-list>
+     	<ion-item ng-repeat="contact in phoneContacts">
+                    {{contact.displayName}}
+              <div class="item item-divider">
+                {{ contact.name.formatted }}
+              </div>
+              <div class="item item-text-wrap">
+                <p><strong>Phone(s)</strong></p>
+                <div ng-repeat="number in contact.phoneNumbers">
+                  <p>{{ number.value }}</p>
+                </div>
+                <p><strong>Email(s)</strong></p>
+                <div ng-repeat="email in contact.emails">
+                  <p>{{ email.value }}</p>
+                </div>
+              </div>
+        </ion-item>
+    </ion-list>
+    
+  </ion-content>
+</ion-view>
+
